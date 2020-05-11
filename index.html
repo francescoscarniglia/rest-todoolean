@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate" />
   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -33,13 +34,11 @@
 
 
 
-  <script id="entry-template" type="text/x-handlebars-template">
-    // <div class="entry">
-    //   <h1>{{title}}</h1>
-    //   <div class="body">
-    //     {{body}}
-    //   </div>
-    // </div>
+  <script id="todo-template" type="text/x-handlebars-template">
+    <li class="todo">
+      {{ todoTemplate }}
+      <span class="delete" data-id="{{ id }}"><i class="fas fa-times-circle curs-pointer"></i></span>
+    </li>
   </script>
 
 

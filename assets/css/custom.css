@@ -33,6 +33,11 @@ h1 {
   list-style: none;
 }
 
+#textInput:focus {
+  outline: 0;
+  background: rgba(0,0,0,.1);
+}
+
 #textInput {
   min-width: 25%;
   border: 0;
