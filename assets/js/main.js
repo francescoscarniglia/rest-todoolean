@@ -10,7 +10,7 @@ $(document).ready(function(){
   var apiUrl = '157.230.17.132:3020/todos';
 
   // Handlebars
-  var source = document.getElementById("entry-template").innerHTML;
+  var source = document.getElementById("todo-template").innerHTML;
   var template = Handlebars.compile(source);
 
 
