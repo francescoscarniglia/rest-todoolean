@@ -1,3 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: lightgreen;
+  font-family: sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.curs-pointer {
+  cursor:pointer;
+}
+
+.fa-times-circle:hover{
+  color: red;
+}
+
+#app {
+  padding: 20px;
+  margin: 0 auto;
+  width: 1070px;
+}
+
+.todoList,
+h1 {
+  padding: 20px 0px;
+}
+
+.todoList {
+  list-style: none;
+}
+
+#textInput {
+  min-width: 25%;
+  border: 0;
+  border-bottom: 1px solid #000;
+  margin: 0px 10px 0px 0px;
+}
+
+#submit {
+  background: #000;
+  border: 0;
+  color: #fff;
+}
+
+#submit:hover {
+  background: green;
+}
+
+.todoList .todo, #textInput, #submit {
+  padding: 8px 10px;
+  font-size: 1.4em;
 }
