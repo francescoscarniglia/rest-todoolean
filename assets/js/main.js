@@ -18,7 +18,37 @@ $(document).ready(function(){
 
   printAll(apiUrl, todoList, template);
 
+  // create toto item
 
+  btnSub.click(function(){
+    var newVal = inputText.val().trim();
+    $.ajax({
+      url : apiUrl,
+      method : 'POST',
+      data: {
+        text : newVal
+      }, success : function() {
+          printAll(apiUrl, todoList, template);
+      }, error : function() {
+        console.log('Errore nella lista');
+      }
+    });
+  });//click
+
+  // delete this
+  $(document).on('click', '.delete', function(){
+    var todoId = $(this).data('id');
+
+    $.ajax({
+      url : apiUrl + '/' + todoId,
+      method : 'DELETE',
+      success : function() {
+          printAll(apiUrl, todoList, template);
+      }, error : function() {
+        console.log('errore');
+      }
+    });
+  })//on
 
 });//ready
 
@@ -38,7 +68,7 @@ function printAll(apiUrl, todoList, template) {
     success : function(data){
       for(i=0; i < data.length;i++) {
         var todo = data[i];
-        console.log(todo);
+        //console.log(todo);
         var context = {
           todo : todo.text,
           id : todo.id
